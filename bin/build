@@ -1,0 +1,7 @@
+#!/bin/bash
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+PROJECT_DIR="$(dirname $SCRIPT_DIR)"
+PROJECT_IMG=cybera/callysto
+
+docker build -t $PROJECT_IMG $PROJECT_DIR
