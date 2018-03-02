@@ -1,8 +1,11 @@
 #!/bin/bash
 
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+PROJECT_DIR="$(dirname $SCRIPT_DIR)"
+PROJECT_IMG=cybera/callysto
+
 docker run -i -t -p 8888:8888 \
-  -v /Users/ackerman/Development/callysto-sample-notebooks:/opt/callysto \
-  cybera/callysto \
+  -v $PROJECT_DIR:/opt/callysto $PROJECT_IMG \
   /opt/conda/bin/jupyter notebook --notebook-dir=/opt/callysto \
     --ip='*' --port=8888 --no-browser --allow-root \
     --NotebookApp.token=''

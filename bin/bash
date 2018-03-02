@@ -1,3 +1,7 @@
 #!/bin/bash
 
-docker run -i -t cybera/callysto /bin/bash
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+PROJECT_DIR="$(dirname $SCRIPT_DIR)"
+PROJECT_IMG=cybera/callysto
+
+docker run -i -t -p 8888:8888 -v $PROJECT_DIR:/opt/callysto $PROJECT_IMG /bin/bash
