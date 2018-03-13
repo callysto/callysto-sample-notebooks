@@ -5,7 +5,7 @@ import sys
 
 from rdflib.term import bind
 
-from gutenberg._domain_model.exceptions import InvalidEtextIdException
+from gutenberg_lite._domain_model.exceptions import InvalidEtextIdException
 
 
 def validate_etextno(etextno):
