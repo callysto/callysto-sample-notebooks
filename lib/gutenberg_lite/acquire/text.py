@@ -9,12 +9,12 @@ from contextlib import closing
 
 import requests
 
-from gutenberg._domain_model.exceptions import UnknownDownloadUriException
-from gutenberg._domain_model.persistence import local_path
-from gutenberg._domain_model.types import validate_etextno
-from gutenberg._util.decorators import execute_only_once
-from gutenberg._util.os import makedirs
-from gutenberg._util.os import remove
+from gutenberg_lite._domain_model.exceptions import UnknownDownloadUriException
+from gutenberg_lite._domain_model.persistence import local_path
+from gutenberg_lite._domain_model.types import validate_etextno
+from gutenberg_lite._util.decorators import execute_only_once
+from gutenberg_lite._util.os import makedirs
+from gutenberg_lite._util.os import remove
 
 _TEXT_CACHE = local_path('text')
 _GUTENBERG_MIRROR = 'http://aleph.gutenberg.org'
@@ -109,8 +109,8 @@ def _main():
 
     """
     from argparse import ArgumentParser, FileType
-    from gutenberg import Error
-    from gutenberg._util.os import reopen_encoded
+    from gutenberg_lite import Error
+    from gutenberg_lite._util.os import reopen_encoded
 
     parser = ArgumentParser(description='Download a Project Gutenberg text')
     parser.add_argument('etextno', type=int)
