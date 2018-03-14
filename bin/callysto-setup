@@ -13,4 +13,5 @@ if [[ "$response" =~ ^(yes|y)$ ]]
   # checking code in
   pip install nbstripout --user
   pip install nbdime --user
+  echo "export PATH=\$PATH:\$HOME/.local/bin" >>$HOME/.bashrc
 fi
