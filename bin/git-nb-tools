@@ -3,7 +3,8 @@
 echo "This will add filters to your git project for .ipynb files to filter out output blocks and view more readable diffs."
 read -r -p "Are you sure you want to go ahead? [y/N] " response
 response=${response,,}    # tolower
-if [[ "$response" =~ ^(yes|y)$ ]] 
+if [[ "$response" =~ ^(yes|y)$ ]]
+then
   git config filter.nbstripout.clean "nbstripout"
   git config filter.nbstripout.smudge cat
   git config filter.nbstripout.required true

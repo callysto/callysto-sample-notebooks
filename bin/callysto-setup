@@ -4,6 +4,7 @@ echo "This will install additional packages into your account needed by the note
 read -r -p "Are you sure you want to go ahead? [y/N] " response
 response=${response,,}    # tolower
 if [[ "$response" =~ ^(yes|y)$ ]]
+then
   # Intall packages used by the notebooks
   pip install textblob --user
   pip install rdflib --user
