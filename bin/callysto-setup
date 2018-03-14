@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo "This will install additional packages into your account needed by the notebooks in this repo."
+read -r -p "Are you sure you want to go ahead? [y/N] " response
+response=${response,,}    # tolower
+if [[ "$response" =~ ^(yes|y)$ ]]
+  # Intall packages used by the notebooks
+  pip install textblob --user
+  pip install rdflib --user
+  python -m nltk.downloader popular
+
+  # Setup git based tools that make it easier to diff notebooks and strip output blocks when
+  # checking code in
+  pip install nbstripout --user
+  pip install nbdime --user
+fi
