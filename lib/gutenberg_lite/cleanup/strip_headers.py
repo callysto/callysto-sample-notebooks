@@ -5,10 +5,10 @@ from __future__ import absolute_import, unicode_literals
 from builtins import str
 import os
 
-from gutenberg._domain_model.text import TEXT_END_MARKERS
-from gutenberg._domain_model.text import TEXT_START_MARKERS
-from gutenberg._domain_model.text import LEGALESE_END_MARKERS
-from gutenberg._domain_model.text import LEGALESE_START_MARKERS
+from gutenberg_lite._domain_model.text import TEXT_END_MARKERS
+from gutenberg_lite._domain_model.text import TEXT_START_MARKERS
+from gutenberg_lite._domain_model.text import LEGALESE_END_MARKERS
+from gutenberg_lite._domain_model.text import LEGALESE_START_MARKERS
 
 
 def strip_headers(text):
@@ -75,8 +75,8 @@ def _main():
 
     """
     from argparse import ArgumentParser, FileType
-    from gutenberg import Error
-    from gutenberg._util.os import reopen_encoded
+    from gutenberg_lite import Error
+    from gutenberg_lite._util.os import reopen_encoded
 
     parser = ArgumentParser(description='Remove headers and footers from a '
                                         'Project Gutenberg text')
