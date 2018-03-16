@@ -10,9 +10,5 @@ then
   pip install rdflib --user
   python -m nltk.downloader popular
 
-  # Setup git based tools that make it easier to diff notebooks and strip output blocks when
-  # checking code in
-  pip install nbstripout --user
-  pip install nbdime --user
   echo "export PATH=\$PATH:\$HOME/.local/bin" >>$HOME/.bashrc
 fi
