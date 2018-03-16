@@ -15,7 +15,4 @@ then
   git config filter.nbstripout.required true
   git config diff.ipynb.textconv "nbstripout -t"
   nbdime config-git --enable
-  echo "*.ipynb filter=nbstripout" >>$HOME/.gitattributes
-  echo "*.ipynb diff=jupyternotebook" >>$HOME/.gitattributes
-  echo "*.ipynb merge=jupyternotebook" >>$HOME/.gitattributes
 fi
