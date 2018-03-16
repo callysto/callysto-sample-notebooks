@@ -66,8 +66,9 @@ Once you have figured out what packages you need, you can add them to the approp
 
 ### Installing packages on hub.callysto.ca
 Python packages can be installed in userspace via either  
- ```
- pip install PACKAGE_NAME --user```  
+```
+pip install PACKAGE_NAME --user
+```  
 in a terminal session or  
 ```
 !pip install PACKAGE_NAME --user
