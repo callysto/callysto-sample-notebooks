@@ -1,10 +1,15 @@
 #!/bin/bash
 
-echo "This will add filters to your git project for .ipynb files to filter out output blocks and view more readable diffs."
+echo "This will set up git tools for working with notebooks and add filters to your git project for .ipynb files to filter out output blocks and view more readable diffs."
 read -r -p "Are you sure you want to go ahead? [y/N] " response
 response=${response,,}    # tolower
 if [[ "$response" =~ ^(yes|y)$ ]]
 then
+  # Setup git based tools that make it easier to diff notebooks and strip output blocks when
+  # checking code in
+  pip install nbstripout --user
+  pip install nbdime --user
+	  
   git config filter.nbstripout.clean "nbstripout"
   git config filter.nbstripout.smudge cat
   git config filter.nbstripout.required true

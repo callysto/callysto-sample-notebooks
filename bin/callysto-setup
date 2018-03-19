@@ -8,11 +8,7 @@ then
   # Intall packages used by the notebooks
   pip install textblob --user
   pip install rdflib --user
-  python -m nltk.downloader popular
+  python -m nltk.downloader punkt brown
 
-  # Setup git based tools that make it easier to diff notebooks and strip output blocks when
-  # checking code in
-  pip install nbstripout --user
-  pip install nbdime --user
   echo "export PATH=\$PATH:\$HOME/.local/bin" >>$HOME/.bashrc
 fi
