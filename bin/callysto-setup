@@ -8,7 +8,7 @@ then
   # Intall packages used by the notebooks
   pip install textblob --user
   pip install rdflib --user
-  python -m nltk.downloader popular
+  python -m nltk.downloader punkt brown
 
   echo "export PATH=\$PATH:\$HOME/.local/bin" >>$HOME/.bashrc
 fi
