@@ -1,13 +1,16 @@
 import os
 
-scriptdir = os.path.dirname(os.path.realpath(__file__))
-os.environ['GUTENBERG_DATA'] = os.path.join(scriptdir, "..", "data", "cache", "gutenberg")
+__script_folder = os.path.dirname(os.path.realpath(__file__))
+os.environ['GUTENBERG_DATA'] = os.path.join(__script_folder, "..", "..", "data", "cache", "gutenberg")
 
-from gutenberg_lite import load_etext
-from gutenberg_lite import strip_headers
-from textblob import TextBlob
+import numpy as np
+from matplotlib import pyplot as plt
 import pandas as pd
-import matplotlib.pyplot as plt
+
+import pylab
+from ipywidgets import interact, interactive, widgets
+from textblob import TextBlob
+from gutenberg_lite import load_etext, strip_headers
 
 def get_gutenberg_text(gutenberg_id):
   text = strip_headers(load_etext(gutenberg_id)).strip()
@@ -28,6 +31,11 @@ def count_unique(text_list):
   return count_df
 
 def plot_text_counts(text_count_df):
+  # for some reason, hub.callysto.ca is resetting these after each cell is run
+  plt.rcParams['figure.figsize'] = [14, 6]
+
   text_count_df = text_count_df.sort_values(by=['count'], ascending=True)
   text_count_plt = text_count_df.plot(kind="barh", x='text')
   text_count_plt
+
+plt.rcParams['figure.figsize'] = [14, 6]
