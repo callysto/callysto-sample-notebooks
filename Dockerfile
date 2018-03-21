@@ -4,7 +4,7 @@ RUN /opt/conda/bin/conda install jupyter -y --quiet
 RUN mkdir /opt/callysto
 
 RUN apt-get install build-essential libdb-dev -y && \
-    pip install gutenberg rdflib nltk && \
+    pip install gutenberg rdflib nltk qgrid && \
     python -m nltk.downloader popular brown
 
 RUN pip install textblob ipyleaflet mobilechelonian metakernel plotly

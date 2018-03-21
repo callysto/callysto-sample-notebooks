@@ -84,14 +84,24 @@ Following installation of these packages, be sure to source your .bashrc file:
 `source ~/.bashrc`
 
 ### Using git on hub.callysto.ca
+
 #### Adding a developer key
-You can avoid having to type your main github account password or store your main private SSH key on the server by generating a new private key and having someone with admin access to the *callysto-sample-notebooks* project add the public part of it to the deploy keys for the project. You can create the new key with the following command and using your Github email address (accepting all defaults by hitting enter):
+
+It's smart to avoid using the same private SSH key on multiple machines, especially when you don't have full control of the environment on a machine. While you could use https authentication for github, which at least shouldn't leave anything on disk, there are [still safer methods](https://developer.github.com/v3/guides/managing-deploy-keys/). 
+
+If you're only accessing one repository on the server, the simplest and safest method is to use a [deploy key](https://github.com/cybera/callysto-sample-notebooks/settings/keys). You are only allowed to use a public key once as a deploy key, so if you need access to more than one repository, you need to use the slightly more complicated method of defining a "machine user", associating that user with the projects you need access to, and adding your newly generated key to that user's keys.
+
+You can [create the new key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) with the following command and using your Github email address (accepting all defaults by hitting enter):
 
   ```bash
   ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
   ```
 
-[Here's more documentation](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) on that. And [here's where an admin can add a deploy key](https://github.com/cybera/callysto-sample-notebooks/settings/keys). Note that by default, the new key will overwrite any key stored in *.ssh/id_rsa*, so don't accept the default path unless you either have no key stored here or no longer need the original private key file.
+Note that by default, the new key will overwrite any key stored in *.ssh/id_rsa*, so don't accept the default path unless you either have no key stored here or no longer need the original private key file.
+
+The "machine user" method allows you to limit access from the server with that key to only the repositories that it needs access to and is recommended if you can do it. A machine user has been set up already for Cybera employees.
+
+Note that you can still set your git config settings to commit code as yourself. As long as the ssh key has access to the repository through *some* user, GitHub trusts whatever identity you give it as the committer.
 
 #### Setting up notebook specific git tools
 Any github project, including this one, can be initialized with a filter to remove output blocks from checkins and give more readable git diffs by running  
