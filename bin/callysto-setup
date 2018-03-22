@@ -10,7 +10,9 @@ then
   pip install rdflib --user
   pip install plotly --user
   pip install colorlover --user
+  pip install qgrid --user
   python -m nltk.downloader punkt brown
+  jupyter nbextension enable --py --user qgrid
 
   echo "export PATH=\$PATH:\$HOME/.local/bin" >>$HOME/.bashrc
 fi
