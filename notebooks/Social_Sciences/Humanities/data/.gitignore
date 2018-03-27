@@ -1,0 +1,7 @@
+gutenberg/text/*
+
+# Specific versions that have the best quality text for the demo
+!gutenberg/text/1112.txt.gz
+!gutenberg/text/1129.txt.gz
+!gutenberg/text/1524.txt.gz
+!gutenberg/text/19337.txt.gz
