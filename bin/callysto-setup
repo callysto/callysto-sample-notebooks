@@ -8,7 +8,6 @@ then
   # Intall packages used by the notebooks
   pip install textblob --user
   pip install rdflib --user
-  pip install plotly --user
   pip install colorlover --user
   pip install qgrid --user
   python -m nltk.downloader punkt brown
