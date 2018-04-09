@@ -1,0 +1,10 @@
+textblob
+rdflib
+colorlover
+qgrid
+nltk
+gutenberg
+ipyleaflet
+mobilechelonian
+metakernal
+plotly
