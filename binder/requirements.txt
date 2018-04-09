@@ -6,5 +6,4 @@ nltk
 gutenberg
 ipyleaflet
 mobilechelonian
-metakernal
 plotly
