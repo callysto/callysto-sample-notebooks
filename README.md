@@ -17,11 +17,7 @@ A collection of sample notebooks to demonstrate what can be done with Jupyter no
 The easiest way to run these sample notebooks is to run them on the JupyterHub set up for the Callysto project. The hub is available at [hub.callysto.ca](https://hub.callysto.ca) and simply requires a Google account to log in. Alternatively, if you have Jupyter set up locally, you can also run these sample notebooks there or use the Docker setup instructions provided below.
 
 ### Downloading the Notebooks
-Once logged in at [hub.callysto.ca](https://hub.callysto.ca), you can download all the notebooks in this repo by clicking on the link below.
-
-```
-https://hub.callysto.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/callysto/callysto-sample-notebooks&branch=master
-```
+Once logged in at [hub.callysto.ca](https://hub.callysto.ca), you can download all the notebooks in this repo by clicking on [this link](https://hub.callysto.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/callysto/callysto-sample-notebooks&branch=master).
 
 This will bring all the folders and notebooks into your hub environment.
 
