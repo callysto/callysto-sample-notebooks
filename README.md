@@ -7,8 +7,7 @@ A collection of sample notebooks to demonstrate what can be done with Jupyter no
 - [Callysto Sample Notebooks](#callysto-sample-notebooks)
 	- [Getting Started](#getting-started)
 		- [Downloading the Notebooks](#downloading-the-notebooks)
-		- [Packages needed for demo notebooks](#packages-needed-for-demo-notebooks)
-	- [Running from Docker](#running-from-docker)
+  - [Running from Docker](#running-from-docker)
 		- [Additional Packages](#additional-packages)
 	- [About Folders in this Repo](#about-folders-in-this-repo)
 
@@ -26,16 +25,6 @@ https://hub.callysto.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.c
 
 This will bring all the folders and notebooks into your hub environment.
 
-### Packages needed for demo notebooks
-In order to run the sample notebooks, certain additional packages need to be installed. This setup will help ensure most of the notebooks run, although certain libraries may still have to be installed (see next section). Whether or not they are included here depends on the frequency that they are used and how heavy- or light-weight they are.
-
-Current additional packages to run the demo notebooks on hub.callysto.ca can be installed via (run in a terminal as above)
-```
-bin/callysto-setup
-```
-
-Following installation of these packages, you need to source your .bashrc file:  
-`source ~/.bashrc`
 
 ## Running from Docker
 
