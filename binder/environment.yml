@@ -1,7 +1,5 @@
 name: base
 channels:
-  - damianavila82
-  - r
   - conda-forge
   - defaults
 dependencies:
