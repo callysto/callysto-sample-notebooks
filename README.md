@@ -7,7 +7,8 @@ A collection of sample notebooks to demonstrate what can be done with Jupyter no
 - [Callysto Sample Notebooks](#callysto-sample-notebooks)
 	- [Getting Started](#getting-started)
 		- [Downloading the Notebooks](#downloading-the-notebooks)
-  - [Running from Docker](#running-from-docker)
+		- [Packages needed for demo notebooks](#packages-needed-for-demo-notebooks)
+	- [Running from Docker](#running-from-docker)
 		- [Additional Packages](#additional-packages)
 	- [About Folders in this Repo](#about-folders-in-this-repo)
 
@@ -17,10 +18,24 @@ A collection of sample notebooks to demonstrate what can be done with Jupyter no
 The easiest way to run these sample notebooks is to run them on the JupyterHub set up for the Callysto project. The hub is available at [hub.callysto.ca](https://hub.callysto.ca) and simply requires a Google account to log in. Alternatively, if you have Jupyter set up locally, you can also run these sample notebooks there or use the Docker setup instructions provided below.
 
 ### Downloading the Notebooks
-Once logged in at [hub.callysto.ca](https://hub.callysto.ca), you can download all the notebooks in this repo by clicking on [this link](https://hub.callysto.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/callysto/callysto-sample-notebooks&branch=master).
+Once logged in at [hub.callysto.ca](https://hub.callysto.ca), you can download all the notebooks in this repo by clicking on the link below.
+
+```
+https://hub.callysto.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/callysto/callysto-sample-notebooks&branch=master
+```
 
 This will bring all the folders and notebooks into your hub environment.
 
+### Packages needed for demo notebooks
+In order to run the sample notebooks, certain additional packages need to be installed. This setup will help ensure most of the notebooks run, although certain libraries may still have to be installed (see next section). Whether or not they are included here depends on the frequency that they are used and how heavy- or light-weight they are.
+
+Current additional packages to run the demo notebooks on hub.callysto.ca can be installed via (run in a terminal as above)
+```
+bin/callysto-setup
+```
+
+Following installation of these packages, you need to source your .bashrc file:  
+`source ~/.bashrc`
 
 ## Running from Docker
 

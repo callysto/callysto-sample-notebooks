@@ -8,18 +8,6 @@ from matplotlib import pyplot as plt
 import pandas as pd
 
 import pylab
-
-import nltk 
-## Check if nltk resources are installed
-try:
-    nltk.data.find('tokenizers/punkt')
-except LookupError:
-    nltk.download('punkt')
-try:
-    nltk.data.find('tokenizers/brown')
-except LookupError:
-    nltk.download('brown')
-    
 from ipywidgets import interact, interactive, widgets
 from textblob import TextBlob
 from .gutenberg_lite import load_etext, strip_headers
