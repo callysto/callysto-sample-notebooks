@@ -43,6 +43,7 @@ dependencies:
   - entrypoints
   - expat
   - fastcache
+  - fiona
   - fontconfig
   - freetype
   - gensim
@@ -246,7 +247,6 @@ dependencies:
     - cligj
     - cs103
     - descartes
-    - fiona
     - munch
     - nbgitpuller
     - pdfdocument
