@@ -12,7 +12,6 @@ dependencies:
   - geojson
   - geopandas
   - geos
-  - gmaps
   - matplotlib
   - pandas
   - plotly
@@ -29,16 +28,5 @@ dependencies:
   - mpld3
   - more-itertools
   - mpmath
-  - pip:
-    - click-plugins
-    - cligj
-    - cs103
-    - descartes
-    - munch
-    - nbgitpuller
-    - pdfdocument
-    - pivottablejs
-    - tensorflow-tensorboard
-    - unidecode
 prefix: /opt/conda
 
