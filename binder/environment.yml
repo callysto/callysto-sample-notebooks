@@ -134,6 +134,7 @@ dependencies:
   - pygments
   - pygpu
   - pyjwt
+  - pylab
   - pyopenssl
   - pyparsing
   - pyproj
